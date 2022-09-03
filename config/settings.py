@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+import django.core.mail.backends.console
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -130,3 +132,5 @@ LOGOUT_REDIRECT_URL = 'home'
 # Crispy forms setting
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Email config
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

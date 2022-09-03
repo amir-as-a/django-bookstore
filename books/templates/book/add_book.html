@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{% block page-title %} Add Book {% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+    </form>
+{% endblock %}

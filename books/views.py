@@ -4,8 +4,9 @@ from . import models, forms
 
 
 class BookListView(generic.ListView):
+	model = models.Book
 	template_name = 'book/book_list.html'
-	context_object_name = 'book'
+	context_object_name = 'all_book'
 
 
 class BookDetailView(generic.DetailView):

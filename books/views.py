@@ -14,6 +14,7 @@ class BookDetailView(generic.DetailView):
 	model = models.Book
 	template_name = 'book/book_detail.html'
 	context_object_name = 'book'
+	
 
 
 class BookCreateView(generic.CreateView):

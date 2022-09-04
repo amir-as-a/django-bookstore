@@ -15,6 +15,7 @@ class CommentModelAdmin(admin.ModelAdmin):
 		'user',
 		'book',
 		'text',
+		'is_active',
 	]
 
 

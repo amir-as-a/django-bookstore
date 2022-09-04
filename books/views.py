@@ -18,7 +18,7 @@ class BookListView(generic.ListView):
 
 def book_detail_view(request, pk):
 	books = get_object_or_404(models.Book, pk = pk)
-	
+	comments = books.comments.filter(is_active = True)
 	if request.method == 'POST':
 		comment_form = forms.CommentForm(request.POST)
 		if comment_form.is_valid():
@@ -33,6 +33,7 @@ def book_detail_view(request, pk):
 	return render(request, 'book/book_detail.html', {
 		'book': books,
 		'comment_form': comment_form,
+		'comments' : comments,
 	})
 
 

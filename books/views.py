@@ -5,6 +5,7 @@ from . import models, forms
 
 class BookListView(generic.ListView):
 	model = models.Book
+	paginate_by = 4
 	template_name = 'book/book_list.html'
 	context_object_name = 'all_book'
 

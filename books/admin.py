@@ -10,4 +10,13 @@ class BookAdmin(admin.ModelAdmin):
 	]
 
 
+class CommentModelAdmin(admin.ModelAdmin):
+	list_display = [
+		'user',
+		'book',
+		'text',
+	]
+
+
 admin.site.register(models.Book, BookAdmin)
+admin.site.register(models.Comment, CommentModelAdmin)
